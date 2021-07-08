@@ -1,0 +1,116 @@
+:root {
+    --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+    --bg-color: #f8a5a5;
+    --bg-color--card: #222831;
+
+    --main-text-color: #ffffff;
+
+    --main-border-radius: 25px;
+    --secondary-border-radius: 15px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+}
+
+.genericBox {
+
+    width: 100%;
+    max-width: 790px;
+    min-height: 300px;
+    padding-left: 300px;
+    text-align: center;
+}
+
+.animate__fadeIn {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.25s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.searchBox__input {
+    border-radius: var(--main-border-radius);
+}
+
+.searchBox__button {
+    border: none;
+    border-radius: var(--main-border-radius);
+    padding: 0.65rem;
+    background-image: var(--gradient);
+    color: var(--main-text-color);
+    font-weight: 700;
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    line-height: initial;
+    width: 100%;
+}
+
+.searchBox__button:hover {
+    color: var(--main-text-color);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.errorBox {
+    bottom: 0;
+}
+
+
+.weatherBox__card {
+    border-radius: var(--main-border-radius);
+}
+
+.weatherBox__card--inner {
+    z-index: 1;
+    height: 300px;
+}
+
+.weatherBox__gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: var(--gradient);
+    background-size: cover;
+    border-radius: var(--main-border-radius);
+    opacity: 0.7;
+}
+.weatherBox__gradient--img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    border-radius: var(--main-border-radius);
+}
+
+.weatherBox__week-day {
+    width: 100px;
+}
+
+.volver{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+
+}

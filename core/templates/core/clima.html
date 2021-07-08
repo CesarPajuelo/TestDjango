@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/clima.css" />
+
+        <title>Rayo Makween Clima</title>
+    </head>
+    <body>
+        <h1 class="text-center p-4"><span class="font-weight-lighter">Rayo Makween</span> Clima</h1>
+
+        <div
+            id="search-box"
+            class="genericBox container p-4 d-flex justify-content-center align-items-center flex-column text-center position-relative">
+            <form id="search-form" class="animate__fadeIn">
+                <input
+                    aria-label="type location here"
+                    type="text"
+                    id="search-query"
+                    class="searchBox__input form-control mb-4"
+                    placeholder="Buscar capital"
+                    required
+                />
+
+                <button type="submit" class="btn searchBox__button">Buscar</button>
+            </form>
+
+            <div id="error-box" class="errorBox d-none alert position-absolute" role="alert"></div>
+        </div>
+
+            <div id="weather-box" class="justify-content-center d-none">
+                <div class="genericBox animate__fadeIn d-block d-md-flex">
+                    <div class="col-12 col-md-4 d-flex weatherBox__card weather-card">
+                        <div class="weatherBox__gradient--img"></div>
+                        <div class="weatherBox__gradient"></div>
+                        <div class="weatherBox__card--inner d-flex flex-column justify-content-between pt-3 pb-2 pl-2">
+                            <div>
+                                <h2 id="weather-card-weekday" class="font-weight-bold mb-1"></h2>
+                                <p id="weather-card-date" class="font-weight-lighter mb-0"></p>
+                                <p class="d-flex align-items-baseline font-weight-lighter mb-1">
+                                    <img width="10" height="15" src="" class="mr-1" />
+                                    <span id="weather-card-location"></span>
+                                </p>
+                            </div>
+                            <div>
+                                <img width="45" id="weather-card-img" src="" />
+                                <h2 class="font-weight-bold mb-1"><span id="weather-card-temp"></span>°C</h2>
+                                <h5 id="weather-card-description" class="font-weight-lighter"></h5>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <h3>Volver a la pagina principal</h3>
+            <div class =volver>
+                <a href="index.html"> <img src="img/kisspng-green-drawing-gradient-cartoon-green-gradient-gloss-return-button-5aa99dad0d8014.6455407215210653890553.png" width="5%"  alt="volver" > </a>
+            </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="script.js"></script>
+</html>
