@@ -1,13 +1,15 @@
 from django.shortcuts import render
+from .models import Vehiculo
 
 # Create your views here.
 
-def index(request):
-    context= {} 
-    return render(request, 'core/index.html', context)
 
 def main(request):
-    context= {} 
+    Vehiculos = Vehiculo.objects.all()   
+    context= {
+        'listaVehiculos':Vehiculos
+
+    } 
     return render(request, 'core/main.html', context)
 
 
