@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -60,10 +61,12 @@
             </div>
             <h3>Volver a la pagina principal</h3>
             <div class =volver>
-                <a href="index.html"> <img src="img/kisspng-green-drawing-gradient-cartoon-green-gradient-gloss-return-button-5aa99dad0d8014.6455407215210653890553.png" width="5%"  alt="volver" > </a>
+                <a href="index.html"> <img src="{% static 'core/img/img2.png' %}" width="5%"  alt="volver" > </a>
             </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="script.js"></script>
+    <script src="core/js/script.js"></script>
 </html>
+    
+ 
