@@ -23,6 +23,7 @@ from django.urls.resolvers import URLPattern
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ]
 
