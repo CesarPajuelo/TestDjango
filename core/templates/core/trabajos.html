@@ -1,45 +1,31 @@
+  
 {% extends 'core/index.html' %}
 {% load static %}
+
 {% block content %}
-    <section class="clientes-contenedor">
-        <h2 class="titulo" style="  margin-right: 110px;">Trabajos Realizados</h2>
-        <div class="carts">
-            <div class="cart" style="left: 360px;top: 470px;">
-                <img src="{% static 'core/img/img1.jpg' %}" alt="">
-                <div class="contenido-texto-card">
-                    <h4>Revisar los niveles de los fluidos</h4>
-                    <ul>
-                        <li>Importantísimo verificar en el depósito, si tenemos líquido de frenos suficiente para poder manejar protegidos para frenar en cualquier circunstancia. </li>
-                        <li>Mecánico: Patricio Cardenas</li>
-                        <li>Herramientas usadas: una varilla para comprobar el nivel</li>
-                        <li>Fecha: 10/01/2020</li>
-                    </ul>
-                </div>
-            </div>           
-            <div class="cart" style=" left: -170px;">
-                <img src="{% static 'core/img/img1.jpg' %}" alt="">
-                <div class="contenido-texto-card">
-                    <h4>Problemas del filtro de Aire</h4>
-                    <ul>
-                        <li>El filtro de aire es muy importante en su automóvil ya que es el encargado de evitar que entre suciedad en el motor. </li>
-                        <li>Mecánico: Ezequiel Jaen</li>
-                        <li>Herramientas usadas: kit de llaves, soplador, guantes y si es necesario un repuesto</li>
-                        <li>Fecha: 23/08/2020</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="cart" style="left: 40px;">
-                <img src="{% static 'core/img/img1.jpg' %}" alt="">
-                <div class="contenido-texto-card">
-                    <h4>Comprobación de la Bateria</h4>
-                    <ul>
-                        <li>¿Quieres que tu coche te deje tirado en cualquier momento y lugar? Seguro que no. </li>
-                        <li>Mecánico: Lucas Cabello</li>
-                        <li>Herramientas usadas: Polimetro y Guantes de Goma</li>
-                        <li>Fecha: 30/01/2021</li>
-                     </ul>                   
-                </div>
-            </div>          
+
+<div class="row">
+    {% for t in trabajos %}
+    <div class="col-lg-4">
+        {% if t.imagen %}
+        
+        <img class="thumbnail" src="{{ t.imagen.url }}">
+        {% endif %}
+
+        <div class="box-element product">
+            <h3>Problema: {{ t.nombre }}</h3>
+            <h4>Marca del auto: {{ t.marca  }}</h4>
+            <h5>Posible Precio: ${{ t.precio }}</h5>
+            <h6>Fecha del arreglo: {{ t.fecha_problema }}</h6>
         </div>
-    </section>
-{% endblock content %}   
+    </div>
+    {% endfor %}
+   
+</div>
+
+      
+
+
+
+
+{% endblock%}

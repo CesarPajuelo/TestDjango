@@ -6,7 +6,7 @@
 }
 
 body{
-    background: rgb(172, 3, 3);
+    background: rgb(90, 38, 38);
     font-family: sans-serif;
     height: 975px;
 
@@ -113,31 +113,24 @@ body{
 
 }
 
-.thumbnail{
-	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-}
 
 h1,h2,h3,h4,h5,h6{
-	color:hsl(0, 0%, 30%);
+	color:hsl(0, 2%, 8%);
 }
 
 .box-element{
-	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
-	background-color: #fff;
+	box-shadow:hsl(0, 9%, 15%) 0 0 16px;
+	background-color: rgb(170, 89, 89);
 	border-radius: 4px;
 	padding: 10px;
 }
 
 .thumbnail{
 	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+	height: 300px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgb(104, 60, 60);
+    -moz-box-shadow: -1px -3px 5px -2px rgb(104, 60, 60);
+    box-shadow: -1px -3px 5px -2px rgb(104, 60, 60);
 }
 
 .product{

@@ -1,31 +1,25 @@
 from django.shortcuts import render
-from .models import Vehiculo
+from .models import Trabajo
+
 
 # Create your views here.
 
 
 def main(request):
-    Vehiculos = Vehiculo.objects.all()   
-    context= {
-        'listaVehiculos':Vehiculos
-
-    } 
-    return render(request, 'core/main.html', context)
-
+    return render(request, 'core/main.html')
 
 def mecanicos(request):
-    context= {} 
-    return render(request, 'core/mecanicos.html', context)
+    return render(request, 'core/mecanicos.html')
 
 def trabajos(request):
-    context= {} 
-    return render(request, 'core/trabajos.html', context)
+    trabajos = Trabajo.objects.all()
+    context = {
+        'trabajos' : trabajos
+    }
+    return render(request, 'core/trabajos.html',context)
 
 def quienessomos(request):
-    context= {} 
-    return render(request, 'core/quienessomos.html', context)
-
-
+    return render(request, 'core/quienessomos.html')
 
 
 
